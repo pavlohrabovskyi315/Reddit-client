@@ -1,22 +1,14 @@
-reddit-client/
-├── public/
-│   └── index.html
-├── src/
-│   ├── api/
-│   │   └── redditAPI.js          # Reddit API wrappers
-│   ├── app/
-│   │   └── store.js              # Redux store
-│   ├── components/               # UI components (Header, SearchBar, Post, etc.)
-│   ├── features/
-│   │   ├── posts/                # postsSlice.js
-│   │   ├── comments/             # commentsSlice.js
-│   │   └── categories/           # categoriesSlice.js
-│   ├── pages/
-│   │   ├── Home/                 # Home page
-│   │   └── PostDetail/           # Post detail page with comments
-│   ├── tests/                    # unit/ and e2e/ test folders
-│   ├── App.js                    # Main routes
-│   ├── index.js                  # App entry point
-│   └── styles.css                # Global styling
-├── package.json
-└── reddit-client.zip             # Final zipped project
+scripts/
+│
+├── run-all.sh                 # Master script
+│
+├── create-project.sh
+├── create-package-json.sh
+├── create-public-files.sh
+├── create-src-structure.sh
+├── create-core-files.sh
+├── create-api.sh
+├── create-redux-store.sh
+├── create-slices.sh
+├── create-pages.sh
+└── zip-project.sh
