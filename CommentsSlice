@@ -1,0 +1,23 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { getPostComments } from "../../api/redditAPI";
+
+export const fetchComments = createAsyncThunk(
+  "comments/fetchComments",
+  async ({ subreddit, id }) => {
+    const json = await getPostComments(subreddit, id);
+    return { id, comments: json[1].data.children.map((c) => c.data) };
+  }
+);
+
+const commentsSlice = createSlice({
+  name: "comments",
+  initialState: { byPostId: {}, isLoading: false },
+  extraReducers: (builder) => {
+    builder.addCase(fetchComments.fulfilled, (state, action) => {
+      state.byPostId[action.payload.id] = action.payload.comments;
+      state.isLoading = false;
+    });
+  }
+});
+
+export default commentsSlice.reducer;
