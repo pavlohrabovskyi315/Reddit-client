@@ -3,26 +3,20 @@ reddit-client/
 │   └── index.html
 ├── src/
 │   ├── api/
-│   │   └── redditAPI.js
+│   │   └── redditAPI.js          # Reddit API wrappers
 │   ├── app/
-│   │   └── store.js
-│   ├── components/
-│   │   ├── Header/
-│   │   ├── SearchBar/
-│   │   ├── Post/
-│   │   ├── PostList/
-│   │   └── Comment/
+│   │   └── store.js              # Redux store
+│   ├── components/               # UI components (Header, SearchBar, Post, etc.)
 │   ├── features/
-│   │   ├── posts/
-│   │   ├── comments/
-│   │   └── categories/
+│   │   ├── posts/                # postsSlice.js
+│   │   ├── comments/             # commentsSlice.js
+│   │   └── categories/           # categoriesSlice.js
 │   ├── pages/
-│   │   ├── Home/
-│   │   └── PostDetail/
-│   ├── tests/
-│   │   ├── unit/
-│   │   └── e2e/
-│   ├── index.js
-│   ├── App.js
-│   └── styles.css
-└── package.json
+│   │   ├── Home/                 # Home page
+│   │   └── PostDetail/           # Post detail page with comments
+│   ├── tests/                    # unit/ and e2e/ test folders
+│   ├── App.js                    # Main routes
+│   ├── index.js                  # App entry point
+│   └── styles.css                # Global styling
+├── package.json
+└── reddit-client.zip             # Final zipped project
