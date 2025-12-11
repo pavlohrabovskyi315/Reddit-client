@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "Creating package.json..."
+
+cat > package.json << 'EOF'
+{
+  "name": "reddit-client",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.0",
+    "react-redux": "^8.1.0",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "cypress": "^13.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "e2e": "cypress open"
+  }
+}
+EOF
