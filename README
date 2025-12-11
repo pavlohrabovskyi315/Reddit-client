@@ -1,0 +1,28 @@
+reddit-client/
+├── public/
+│   └── index.html
+├── src/
+│   ├── api/
+│   │   └── redditAPI.js
+│   ├── app/
+│   │   └── store.js
+│   ├── components/
+│   │   ├── Header/
+│   │   ├── SearchBar/
+│   │   ├── Post/
+│   │   ├── PostList/
+│   │   └── Comment/
+│   ├── features/
+│   │   ├── posts/
+│   │   ├── comments/
+│   │   └── categories/
+│   ├── pages/
+│   │   ├── Home/
+│   │   └── PostDetail/
+│   ├── tests/
+│   │   ├── unit/
+│   │   └── e2e/
+│   ├── index.js
+│   ├── App.js
+│   └── styles.css
+└── package.json
