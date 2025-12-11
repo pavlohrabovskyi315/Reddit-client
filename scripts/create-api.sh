@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo "Creating API utilities..."
+
+cat > src/api/redditAPI.js << 'EOF'
+export async function fetchRedditJSON(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error("Failed fetching Reddit API");
+  return response.json();
+}
+
+export function getPosts(subreddit) {
+  return fetchRedditJSON(\`https://www.reddit.com/r/\${subreddit}.json\`);
+}
+
+export function searchPosts(query) {
+  return fetchRedditJSON(\`https://www.reddit.com/search.json?q=\${encodeURIComponent(query)}\`);
+}
+
+export function getPostComments(subreddit, id) {
+  return fetchRedditJSON(\`https://www.reddit.com/r/\${subreddit}/comments/\${id}.json\`);
+}
+EOF
